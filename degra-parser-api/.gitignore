@@ -1,0 +1,70 @@
+# ===== Sekrety i konfiguracja lokalna =====
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+*.pfx
+*.p12
+
+# ===== Wyniki budowania .NET =====
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm64/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+publish/
+*.nupkg
+*.snupkg
+
+# ===== Visual Studio =====
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+launchSettings.local.json
+*.vspscc
+*.vssscc
+_ReSharper*/
+*.DotSettings.user
+
+# ===== Rider / VS Code =====
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ===== Testy i pokrycie kodu =====
+TestResults/
+[Tt]est[Rr]esult*/
+coverage*.json
+coverage*.xml
+*.coverage
+*.coveragexml
+
+# ===== NuGet =====
+*.nuget.props
+*.nuget.targets
+packages/
+!**/[Pp]ackages/build/
+project.lock.json
+project.fragment.lock.json
+
+# ===== Pliki tymczasowe i logi =====
+*.log
+*.tmp
+*.cache
+*.swp
+*~
+
+# ===== Systemowe =====
+.DS_Store
+Thumbs.db
+desktop.ini
