@@ -17,7 +17,9 @@
 
             var h = page.Height;
             var words = ExtractRuns(page, h);   //wszystkie slowa z pdf
-            var timeslots = ExtractTimeSlots(words);
+
+            var timeslots = ExtractTimeSlots(words);    //godziny 
+            double gridTop = timeslots.Min(s => s.Box.Top) - 3;
 
             foreach (var ts in timeslots)
                 Console.WriteLine($"Slot: {ts.Start} - {ts.End}, Box: {ts.Day}");
@@ -52,6 +54,12 @@
                 .Select(g => new Block(g.First().Box, g.Count(s => s.Triangle) >= 2))
                 .ToList();
 
+            var headers = ExtractHeaders(blocks, words, gridTop);
+            foreach (HeaderColumn header in headers)
+            {
+                Console.WriteLine(header.Category);
+            }
+
             foreach (var b in blocks)
             {  //dla kazdego bloku dopisanie słow ze srodka
                 var wordsInside = words.Where(w => b.Box.Contains(w.Box.CenterX, w.Box.CenterY))
@@ -61,8 +69,10 @@
                 foreach (var w in wordsInside)
                     b.Parts[b.IsSplit ? HalfOf(b.Box, w.Box) : 0].Add(w);
 
-                Console.WriteLine($"Blok {b}");
+                Console.WriteLine($"Blok {MatchGroup(b.Box, headers)} ---- {b}");
             }
+
+
             return null;
         }
 
@@ -100,5 +110,46 @@
             }
             return slots;
         }
+        static List<HeaderColumn> ExtractHeaders(List<Block> blocks, List<TextRun> runs, double gridTop)
+        {
+            List<HeaderColumn> headers = new List<HeaderColumn>();
+            var rx = new Regex(@"^(W|Ćw|Ps|L|P)\s*(\d+)$");
+            var headerBlocks = blocks.Where(b => (b.Box.Bottom <= gridTop + 1.5) && (b.Box.Height < 15))
+                .ToList();
+            foreach (var header in headerBlocks)
+            {
+                foreach (var run in runs.Where(r => header.Box.Contains(r.Box.CenterX, r.Box.CenterY)))
+                {
+                    var m = rx.Match(run.Text);
+                    if (!m.Success) continue;
+
+                    headers.Add(new HeaderColumn(
+                        $"{m.Groups[1].Value} {m.Groups[2].Value}",   
+                        m.Groups[1].Value,                            
+                        header.Box));
+                    break;                                            
+                }
+            }
+
+            return headers
+                .GroupBy(c => c.Label).Select(g => g.First())         // bez duplikatów
+                .OrderBy(c => c.Box.Top).ThenBy(c => c.Box.Left)
+                .ToList();
+            return null;
+        }
+
+        static string? MatchGroup(Box block, List<HeaderColumn> headers)
+        {
+            var header = headers.Where(h =>
+                    Math.Abs(block.Left - h.Box.Left) < 1.5 && Math.Abs(block.Right - h.Box.Right) < 1.5)
+                .OrderByDescending(h => h.Box.Width)
+                .FirstOrDefault();
+            if (header is not null) return header.Label;
+
+            bool fullWidth = Math.Abs(block.Left - headers.Min(h => h.Box.Left)) < 1.5
+                          && Math.Abs(block.Right - headers.Max(h => h.Box.Right)) < 1.5;
+            return fullWidth ? "Wszyscy" : null;
+        }
     }
+
 }
