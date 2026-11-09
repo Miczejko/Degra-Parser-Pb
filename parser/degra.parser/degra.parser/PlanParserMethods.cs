@@ -100,5 +100,28 @@ namespace degra.parser
                     + (text.CenterY - cell.Top) / cell.Height;
             return u < 1 ? 0 : 1;
         }
+
+        static List<GroupNode> makeGroups(List<HeaderColumn> headers)
+        {
+            var groups = new List<GroupNode>();
+            foreach(var header in headers)
+            {
+                string? parent = null;
+                if (header.Category == "Ćw" || header.Category == "Ps")
+                {
+                    parent = headers.FirstOrDefault(h =>
+                        h.Category == "W" &&
+                        header.Box.Left >= h.Box.Left)?.Label;
+                }                
+                var children = headers.Where(h =>
+                    (h.Category == "Ćw" || h.Category == "Ps") &&
+                    h.Box.Left >= header.Box.Left &&
+                    h.Box.Right <= header.Box.Right)
+                    .Select(h => h.Label)
+                    .ToList();
+                groups.Add(new GroupNode(header.Label, header.Category, parent, children));
+            }
+            return groups;
+        }
     }
 }

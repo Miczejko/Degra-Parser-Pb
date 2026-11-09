@@ -14,6 +14,7 @@
 
             Console.WriteLine($"Strona: {page.Width} x {page.Height}");
 
+            List<ClassEntry> classEntries = new List<ClassEntry>();
 
             var h = page.Height;
             var words = ExtractRuns(page, h);   //wszystkie slowa z pdf
@@ -74,7 +75,8 @@
 
             }
 
-
+            List<GroupNode> groups = makeGroups(headers);
+            //return new Schedule("test", "0", timeslots, groups, classEntries, new List<string>());
             return null;
         }
 
