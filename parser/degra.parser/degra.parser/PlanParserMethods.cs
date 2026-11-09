@@ -116,12 +116,28 @@ namespace degra.parser
                 var children = headers.Where(h =>
                     (h.Category == "Ćw" || h.Category == "Ps") &&
                     h.Box.Left >= header.Box.Left &&
-                    h.Box.Right <= header.Box.Right)
+                    h.Box.Right <= header.Box.Right &&
+                    h.Label != header.Label)
                     .Select(h => h.Label)
                     .ToList();
                 groups.Add(new GroupNode(header.Label, header.Category, parent, children));
             }
             return groups;
+        }
+
+        static List<TimePeriod> makeTimePeriods(List<TimeSlot> slots)
+        {
+            var periods = new List<TimePeriod>();
+            var dailySlots = slots.Where(s => s.Day == slots[0].Day)
+                .OrderBy(s => s.Start);
+            int index = 1;
+            foreach (var slot in dailySlots.Chunk(2))
+            {   
+                var units = slot.Select(s => new TimeRange(s.Start, s.End)).ToList();
+                periods.Add(new TimePeriod(index, slot[0].Start, slot[1].End, units));
+                index++;
+            }
+            return periods;
         }
     }
 }

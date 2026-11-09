@@ -76,8 +76,12 @@
             }
 
             List<GroupNode> groups = makeGroups(headers);
-            //return new Schedule("test", "0", timeslots, groups, classEntries, new List<string>());
-            return null;
+            List<TimePeriod> periods = makeTimePeriods(timeslots);
+            foreach(var group in groups)
+            {
+                Console.WriteLine($"Group: {group.Name}, Category: {group.Category}, Parent: {group.Parent}, Children: {string.Join(", ", group.Children)}");
+            }
+            return new Schedule("test", "0", periods, groups, classEntries, new List<string>());
         }
 
         static List<TimeSlot> ExtractTimeSlots(List<TextRun> runs)
