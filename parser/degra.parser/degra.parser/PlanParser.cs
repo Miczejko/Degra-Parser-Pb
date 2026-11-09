@@ -69,7 +69,9 @@
                 foreach (var w in wordsInside)
                     b.Parts[b.IsSplit ? HalfOf(b.Box, w.Box) : 0].Add(w);
 
-                Console.WriteLine($"Blok {MatchGroup(b.Box, headers)} ---- {b}");
+                //Console.WriteLine($"Blok {MatchGroup(b.Box, headers)} ---- {b}");
+                Console.WriteLine($"Blok {CoveredSlots(b.Box, timeslots).Select(s => s.Start).FirstOrDefault()} ---- {b}");
+
             }
 
 
@@ -135,7 +137,6 @@
                 .GroupBy(c => c.Label).Select(g => g.First())         // bez duplikatów
                 .OrderBy(c => c.Box.Top).ThenBy(c => c.Box.Left)
                 .ToList();
-            return null;
         }
 
         static string? MatchGroup(Box block, List<HeaderColumn> headers)
@@ -150,6 +151,11 @@
                           && Math.Abs(block.Right - headers.Max(h => h.Box.Right)) < 1.5;
             return fullWidth ? "Wszyscy" : null;
         }
+
+        static List<TimeSlot> CoveredSlots(Box block, List<TimeSlot> slots) =>
+            slots.Where(s => s.Box.CenterY > block.Top && s.Box.CenterY < block.Bottom)
+                 .OrderBy(s => s.Box.Top)
+                 .ToList();
     }
 
 }
