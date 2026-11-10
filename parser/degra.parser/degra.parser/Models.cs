@@ -58,6 +58,8 @@ namespace degra.parser
 
     internal record HeaderColumn(string Label, string Category, Box Box);
 
+    internal record CellText(string Subject, string? Short, string Type, string? Room, string? Teacher);
+
     internal class Block(Box box, bool isSplit)
     {
         public Box Box { get; } = box;
