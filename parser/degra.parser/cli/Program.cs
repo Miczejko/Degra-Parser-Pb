@@ -23,7 +23,7 @@ var json = JsonSerializer.Serialize(schedule, new JsonSerializerOptions
 });
 
 if (string.IsNullOrEmpty(jsonPath))
-    jsonPath = "../../../../Data/data.json";
+    jsonPath = "../../../../data/data.json";
 
 File.WriteAllText(jsonPath, json);
 
