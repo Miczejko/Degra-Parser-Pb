@@ -35,6 +35,7 @@
             var schedule = PlanParser.Parse(Path.Combine(TestDataPath, file));
 
             Assert.DoesNotContain("Nieznane", schedule.Entries.Select(e => e.Subject));
+            Assert.DoesNotContain(null, schedule.Entries.Select(e => e.Teacher));
         }
     }
 }

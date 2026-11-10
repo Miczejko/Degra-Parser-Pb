@@ -243,7 +243,11 @@ namespace degra.parser
 
                     string? room = m.Groups["room"].Success ? m.Groups["room"].Value : null;
 
-                    string? teacher = m.Groups["rest"].Success ? string.Join(" ", lines.Where((_, j) => j != i)) : null;
+                    var teacherParts = new List<string>();
+                    if (m.Groups["rest"].Success) teacherParts.Add(m.Groups["rest"].Value);
+                    teacherParts.AddRange(lines.Where((_, j) => j != i));
+
+                    string? teacher = teacherParts.Count > 0 ? string.Join(" ", teacherParts) : null;
 
 
                     return new CellText(name, abbr, ClassType(m.Groups["type"].Value, name, room), room, teacher);
