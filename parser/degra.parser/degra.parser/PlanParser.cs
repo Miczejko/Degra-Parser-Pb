@@ -31,6 +31,8 @@
             var words = ExtractRuns(page, h);   
 
             var timeslots = ExtractTimeSlots(words);    
+
+            //Top position of the grid containing the schedule, used to filter out blocks that are not classes
             double gridTop = timeslots.Min(s => s.Box.Top) - 3;
 
             foreach (var ts in timeslots)
@@ -42,10 +44,12 @@
 
             var shapes = new List<(Box Box, bool Triangle)>();
 
+            //All color filled blocks, grouped by color
             var byColor = page.Paths.Where(p => p.IsFilled)     
                 .GroupBy(p => p.FillColor?.ToRGBValues())
                 .ToList();
 
+            //Adding all blocks to the shapes list, along with their bounding box and whether they are triangles or not
             foreach (var colorBoxes in byColor)
             {
                 Console.WriteLine($"Kolor {colorBoxes.Key}: {colorBoxes.Count()} bloków");
@@ -58,6 +62,7 @@
                 }
             }
 
+            //Group blocks by their bounding box, and create a new Block object for each group
             var blocks = shapes
                 .GroupBy(s => (Math.Round(s.Box.Left), Math.Round(s.Box.Top),
                                Math.Round(s.Box.Right), Math.Round(s.Box.Bottom)))
@@ -70,6 +75,7 @@
                 Console.WriteLine(header.Category);
             }
 
+            //Adding text runs to the blocks, and creating ClassEntry objects for each block
             foreach (var b in blocks.Where(b => b.Box.Top > gridTop - 1.5))
             {  
                 var wordsInside = words.Where(w => b.Box.Contains(w.Box.CenterX, w.Box.CenterY))
@@ -78,8 +84,8 @@
                 foreach (var w in wordsInside)
                     b.Parts[b.IsSplit ? HalfOf(b.Box, w.Box) : 0].Add(w);
 
-                var timeSlots = CoveredSlots(b.Box, timeslots);
-                var group = MatchGroup(b.Box, headers);
+                var timeSlots = CoveredSlots(b.Box, timeslots); //Time slots that match the block's position on the page
+                var group = MatchGroup(b.Box, headers);     //Group that matches the block's position on the page
 
                 if (timeSlots.Count == 0)
                 {
@@ -116,8 +122,8 @@
                 }
             }
 
-            List<GroupNode> groups = makeGroups(headers);
-            List<TimePeriod> periods = makeTimePeriods(timeslots);
+            List<GroupNode> groups = makeGroups(headers);   //all groups, with their parent/child relationships
+            List<TimePeriod> periods = makeTimePeriods(timeslots);  //all time periods, with their start/end times and the 45-minute units that make them up
 
             return new Schedule("test", "0", periods, groups, classEntries, new List<string>());
         }                         

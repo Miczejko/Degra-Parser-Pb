@@ -1,0 +1,1385 @@
+{
+  "title": "test",
+  "updatedAt": "0",
+  "timeSlots": [
+    {
+      "number": 1,
+      "start": "08:30",
+      "end": "10:00",
+      "units": [
+        {
+          "start": "08:30",
+          "end": "09:15"
+        },
+        {
+          "start": "09:15",
+          "end": "10:00"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "start": "10:15",
+      "end": "11:45",
+      "units": [
+        {
+          "start": "10:15",
+          "end": "11:00"
+        },
+        {
+          "start": "11:00",
+          "end": "11:45"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "start": "12:00",
+      "end": "13:30",
+      "units": [
+        {
+          "start": "12:00",
+          "end": "12:45"
+        },
+        {
+          "start": "12:45",
+          "end": "13:30"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "start": "14:00",
+      "end": "15:30",
+      "units": [
+        {
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "start": "14:45",
+          "end": "15:30"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "start": "16:00",
+      "end": "17:30",
+      "units": [
+        {
+          "start": "16:00",
+          "end": "16:45"
+        },
+        {
+          "start": "16:45",
+          "end": "17:30"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "start": "17:40",
+      "end": "19:10",
+      "units": [
+        {
+          "start": "17:40",
+          "end": "18:25"
+        },
+        {
+          "start": "18:25",
+          "end": "19:10"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "start": "19:20",
+      "end": "20:50",
+      "units": [
+        {
+          "start": "19:20",
+          "end": "20:05"
+        },
+        {
+          "start": "20:05",
+          "end": "20:50"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "name": "W 1",
+      "category": "W",
+      "parent": null,
+      "children": [
+        "Ćw 1",
+        "Ćw 2",
+        "Ćw 3",
+        "Ćw 4",
+        "Ćw 5",
+        "Ćw 6",
+        "Ps 1",
+        "Ps 2",
+        "Ps 3"
+      ]
+    },
+    {
+      "name": "W 2",
+      "category": "W",
+      "parent": null,
+      "children": [
+        "Ćw 7",
+        "Ćw 8",
+        "Ćw 9",
+        "Ćw 10",
+        "Ćw 11",
+        "Ćw 12",
+        "Ps 4",
+        "Ps 5",
+        "Ps 6"
+      ]
+    },
+    {
+      "name": "W 3",
+      "category": "W",
+      "parent": null,
+      "children": [
+        "Ćw 13",
+        "Ćw 14",
+        "Ćw 15",
+        "Ćw 16",
+        "Ćw 17",
+        "Ćw 18",
+        "Ps 7",
+        "Ps 8",
+        "Ps 9"
+      ]
+    },
+    {
+      "name": "Ćw 1",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 2",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 3",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 4",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 5",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 6",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 7",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 8",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 9",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 10",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 11",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 12",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 13",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 14",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 15",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 16",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 17",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ćw 18",
+      "category": "Ćw",
+      "parent": "W 1",
+      "children": []
+    },
+    {
+      "name": "Ps 1",
+      "category": "Ps",
+      "parent": "W 1",
+      "children": [
+        "Ćw 1",
+        "Ćw 2"
+      ]
+    },
+    {
+      "name": "Ps 2",
+      "category": "Ps",
+      "parent": "W 1",
+      "children": [
+        "Ćw 3",
+        "Ćw 4"
+      ]
+    },
+    {
+      "name": "Ps 3",
+      "category": "Ps",
+      "parent": "W 1",
+      "children": [
+        "Ćw 5",
+        "Ćw 6"
+      ]
+    },
+    {
+      "name": "Ps 4",
+      "category": "Ps",
+      "parent": "W 1",
+      "children": [
+        "Ćw 7",
+        "Ćw 8"
+      ]
+    },
+    {
+      "name": "Ps 5",
+      "category": "Ps",
+      "parent": "W 1",
+      "children": [
+        "Ćw 9",
+        "Ćw 10"
+      ]
+    },
+    {
+      "name": "Ps 6",
+      "category": "Ps",
+      "parent": "W 1",
+      "children": [
+        "Ćw 11",
+        "Ćw 12"
+      ]
+    },
+    {
+      "name": "Ps 7",
+      "category": "Ps",
+      "parent": "W 1",
+      "children": [
+        "Ćw 13",
+        "Ćw 14"
+      ]
+    },
+    {
+      "name": "Ps 8",
+      "category": "Ps",
+      "parent": "W 1",
+      "children": [
+        "Ćw 15",
+        "Ćw 16"
+      ]
+    },
+    {
+      "name": "Ps 9",
+      "category": "Ps",
+      "parent": "W 1",
+      "children": [
+        "Ćw 17",
+        "Ćw 18"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "day": "Wtorek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "SYSTEMY MOBILNE",
+      "subjectShort": "SM",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 1",
+      "part": 1
+    },
+    {
+      "day": "Wtorek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "SYSTEMY MOBILNE",
+      "subjectShort": "SM",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 1",
+      "part": 2
+    },
+    {
+      "day": "Wtorek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "SYSTEMY MOBILNE",
+      "subjectShort": "SM",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 2",
+      "part": 1
+    },
+    {
+      "day": "Wtorek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "SYSTEMY MOBILNE",
+      "subjectShort": "SM",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 2",
+      "part": 2
+    },
+    {
+      "day": "Wtorek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "SYSTEMY MOBILNE",
+      "subjectShort": "SM",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 3",
+      "part": 1
+    },
+    {
+      "day": "Wtorek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "SYSTEMY MOBILNE",
+      "subjectShort": "SM",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 3",
+      "part": 2
+    },
+    {
+      "day": "Czwartek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "OCHRONA WŁASNOŚCI INTELEKTUALNEJ",
+      "subjectShort": "OWI",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 1",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "OCHRONA WŁASNOŚCI INTELEKTUALNEJ",
+      "subjectShort": "OWI",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 2",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "OCHRONA WŁASNOŚCI INTELEKTUALNEJ",
+      "subjectShort": "OWI",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 3",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "GRAFIKA KOMPUTEROWA",
+      "subjectShort": "Graf.",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 1",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "GRAFIKA KOMPUTEROWA",
+      "subjectShort": "Graf.",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 2",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "GRAFIKA KOMPUTEROWA",
+      "subjectShort": "Graf.",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": null,
+      "group": "W 3",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "ADMINISTRACJA SYSTEMAMI LINUX",
+      "subjectShort": "ASL",
+      "type": "Wykład",
+      "room": "C16",
+      "teacher": null,
+      "group": "W 1",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "ZAAWANSOWANA ADMINISTRACJA SYSTEMAMI LINUX",
+      "subjectShort": "ZASL",
+      "type": "Wykład",
+      "room": "C16",
+      "teacher": null,
+      "group": "W 1",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "AUTOMATYZACJA ZARZADZANIEM SYSTEMAMI LINUX",
+      "subjectShort": "AZSL",
+      "type": "Wykład",
+      "room": "C16",
+      "teacher": null,
+      "group": "W 1",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "APLIKACJE INTERNETOWE OPARTE O KOMPONENTY",
+      "subjectShort": "AIOoK",
+      "type": "Wykład",
+      "room": "C21",
+      "teacher": null,
+      "group": "W 2",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "APLIKACJE WEBOWE W ASP MVC",
+      "subjectShort": "ASP MVC",
+      "type": "Wykład",
+      "room": "C21",
+      "teacher": null,
+      "group": "W 2",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "PROGRAMOWANIE APLIKACJI W JĘZYKU JAVASCRIPT",
+      "subjectShort": "PAwJJS",
+      "type": "Wykład",
+      "room": "C25/1",
+      "teacher": null,
+      "group": "W 2",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "19:20",
+      "end": "20:50",
+      "subject": "WIDZENIE MASZYNOWE",
+      "subjectShort": "WM",
+      "type": "Wykład",
+      "room": "C21",
+      "teacher": null,
+      "group": "W 3",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "ZAAWANSOWANE METODY I TECHNIKI PROGR. W PYTHONIE",
+      "subjectShort": "ZMiTPwP",
+      "type": "Wykład",
+      "room": "C16",
+      "teacher": null,
+      "group": "W 3",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "WPROWADZENIE DO GOOGLE CLOUD PLATFORM",
+      "subjectShort": "Google",
+      "type": "Wykład",
+      "room": "C25/1",
+      "teacher": null,
+      "group": "W 3",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "RZECZYWISTOŚĆ WIRTUALNA",
+      "subjectShort": "RW",
+      "type": "Wykład",
+      "room": "C25/2",
+      "teacher": null,
+      "group": "W 3",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Język angielski",
+      "subjectShort": null,
+      "type": "Lektorat",
+      "room": "CNK P1/14",
+      "teacher": null,
+      "group": null,
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Język angielski",
+      "subjectShort": null,
+      "type": "Lektorat",
+      "room": "CNK P2/2",
+      "teacher": null,
+      "group": null,
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Język angielski",
+      "subjectShort": null,
+      "type": "Lektorat",
+      "room": "CNK P2/3",
+      "teacher": null,
+      "group": null,
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Język angielski",
+      "subjectShort": null,
+      "type": "Lektorat",
+      "room": "CNK P1/2",
+      "teacher": null,
+      "group": null,
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Język angielski",
+      "subjectShort": null,
+      "type": "Lektorat",
+      "room": "CNK P2/14",
+      "teacher": null,
+      "group": null,
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Język angielski",
+      "subjectShort": null,
+      "type": "Lektorat",
+      "room": "CNK P2/19",
+      "teacher": null,
+      "group": null,
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Język angielski",
+      "subjectShort": null,
+      "type": "Lektorat",
+      "room": "CNK P2/20",
+      "teacher": null,
+      "group": null,
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Język angielski",
+      "subjectShort": null,
+      "type": "Lektorat",
+      "room": "CNK P1/1",
+      "teacher": null,
+      "group": null,
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "19:20",
+      "end": "20:50",
+      "subject": "PZ1",
+      "subjectShort": null,
+      "type": "Projekt",
+      "room": "A212",
+      "teacher": null,
+      "group": "Ps 1",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "PZ1",
+      "subjectShort": null,
+      "type": "Projekt",
+      "room": "A211",
+      "teacher": null,
+      "group": "Ps 2",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "PZ1",
+      "subjectShort": null,
+      "type": "Projekt",
+      "room": "A228",
+      "teacher": null,
+      "group": "Ps 3",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "PZ1",
+      "subjectShort": null,
+      "type": "Projekt",
+      "room": "A211",
+      "teacher": null,
+      "group": "Ps 4",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "19:20",
+      "end": "20:50",
+      "subject": "PZ1",
+      "subjectShort": null,
+      "type": "Projekt",
+      "room": "A230",
+      "teacher": null,
+      "group": "Ps 5",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Projekt zespołowy 1",
+      "subjectShort": null,
+      "type": "Projekt",
+      "room": "B5",
+      "teacher": null,
+      "group": "Ps 6",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Projekt zespołowy 1",
+      "subjectShort": null,
+      "type": "Projekt",
+      "room": "B5",
+      "teacher": null,
+      "group": "Ps 7",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Projekt zespołowy 1",
+      "subjectShort": null,
+      "type": "Projekt",
+      "room": "B5",
+      "teacher": null,
+      "group": "Ps 8",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Projekt zespołowy 1",
+      "subjectShort": null,
+      "type": "Projekt",
+      "room": "B5",
+      "teacher": null,
+      "group": "Ps 9",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Graf.",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A04",
+      "teacher": null,
+      "group": "Ps 6",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "Graf.",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A203",
+      "teacher": null,
+      "group": "Ps 9",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Systemy mobilne",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A206",
+      "teacher": null,
+      "group": "Ps 1",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Graf.",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A04",
+      "teacher": null,
+      "group": "Ps 8",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Graf.",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A04",
+      "teacher": null,
+      "group": "Ps 7",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Systemy mobilne",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A206",
+      "teacher": null,
+      "group": "Ps 2",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "Graf.",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A136",
+      "teacher": null,
+      "group": "Ps 1",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "Systemy mobilne",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A206",
+      "teacher": null,
+      "group": "Ps 3",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "Systemy mobilne",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A206",
+      "teacher": null,
+      "group": "Ps 5",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "Graf.",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A212",
+      "teacher": null,
+      "group": "Ps 3",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "19:20",
+      "end": "20:50",
+      "subject": "Systemy mobilne",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A206",
+      "teacher": null,
+      "group": "Ps 4",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "Systemy mobilne",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A206",
+      "teacher": null,
+      "group": "Ps 9",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Systemy mobilne",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A206",
+      "teacher": null,
+      "group": "Ps 8",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "19:20",
+      "end": "20:50",
+      "subject": "Graf.",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A211",
+      "teacher": null,
+      "group": "Ps 4",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Systemy mobilne",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A206",
+      "teacher": null,
+      "group": "Ps 6",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Systemy mobilne",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A206",
+      "teacher": null,
+      "group": "Ps 7",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Graf.",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A211",
+      "teacher": null,
+      "group": "Ps 5",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "Graf.",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A212",
+      "teacher": null,
+      "group": "Ps 2",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "ASL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A135",
+      "teacher": null,
+      "group": "Ps 3",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "ZASL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A135",
+      "teacher": null,
+      "group": "Ps 3",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "AZSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A135",
+      "teacher": null,
+      "group": "Ps 3",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "ASL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A135",
+      "teacher": null,
+      "group": "Ps 2",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "ZASL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A135",
+      "teacher": null,
+      "group": "Ps 2",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "AZSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A135",
+      "teacher": null,
+      "group": "Ps 2",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "AZSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A135",
+      "teacher": null,
+      "group": "Ps 1",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "ZASL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A135",
+      "teacher": null,
+      "group": "Ps 1",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "ASL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A135",
+      "teacher": null,
+      "group": "Ps 1",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "AIOoK",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A024",
+      "teacher": null,
+      "group": "Ps 4",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "AIOoK",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A024",
+      "teacher": null,
+      "group": "Ps 5",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "AIOoK",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A024",
+      "teacher": null,
+      "group": "Ps 6",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "ASP MVC",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A203",
+      "teacher": null,
+      "group": "Ps 6",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "ASP MVC",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A203",
+      "teacher": null,
+      "group": "Ps 5",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "ASP MVC",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A203",
+      "teacher": null,
+      "group": "Ps 4",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "PAwJJS",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A203",
+      "teacher": null,
+      "group": "Ps 4",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "PAwJJS",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A203",
+      "teacher": null,
+      "group": "Ps 5",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "PAwJJS",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A203",
+      "teacher": null,
+      "group": "Ps 6",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "ZMiTPwP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A026",
+      "teacher": null,
+      "group": "Ps 7",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "ZMiTPwP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A026",
+      "teacher": null,
+      "group": "Ps 8",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "ZMiTPwP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A025",
+      "teacher": null,
+      "group": "Ps 9",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "Google",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A211",
+      "teacher": null,
+      "group": "Ps 7",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "Google",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A211",
+      "teacher": null,
+      "group": "Ps 8",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "WM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A02",
+      "teacher": null,
+      "group": "Ps 7",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "19:20",
+      "end": "20:50",
+      "subject": "WM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A02",
+      "teacher": null,
+      "group": "Ps 8",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "RW",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A02",
+      "teacher": null,
+      "group": "Ps 7",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "RW",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A02",
+      "teacher": null,
+      "group": "Ps 8",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "J.hisz.(o)",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "CNK P2/19",
+      "teacher": null,
+      "group": "Ćw 4",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "J. ros.",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "CNK P1/14",
+      "teacher": null,
+      "group": "Ćw 3",
+      "part": null
+    }
+  ],
+  "warnings": []
+}
