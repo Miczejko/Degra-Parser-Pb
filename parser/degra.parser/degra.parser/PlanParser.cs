@@ -4,21 +4,35 @@
     using UglyToad.PdfPig.Content;
     using UglyToad.PdfPig.Core;
     using System.Text.RegularExpressions;
+    using System.Diagnostics.Contracts;
 
     public static partial class PlanParser
     {
         public static Schedule Parse(String pdfPath)
         {
+            Dictionary<int, string> dayNames = new Dictionary<int, string>
+            {
+                { 0, "Poniedziałek" },
+                { 1, "Wtorek" },
+                { 2, "Środa" },
+                { 3, "Czwartek" },
+                { 4, "Piątek" }
+            };
+
+
             var pdf = PdfDocument.Open(pdfPath);
             var page = pdf.GetPage(1);
 
             Console.WriteLine($"Strona: {page.Width} x {page.Height}");
 
+            List<ClassEntry> classEntries = new List<ClassEntry>();
 
             var h = page.Height;
-            var words = ExtractRuns(page, h);   //wszystkie slowa z pdf
+            var words = ExtractRuns(page, h);   
 
-            var timeslots = ExtractTimeSlots(words);    //godziny 
+            var timeslots = ExtractTimeSlots(words);    
+
+            //Top position of the grid containing the schedule, used to filter out blocks that are not classes
             double gridTop = timeslots.Min(s => s.Box.Top) - 3;
 
             foreach (var ts in timeslots)
@@ -28,13 +42,14 @@
 
             Console.WriteLine($"Liter: {page.Letters.Count}, słów: {words.Count()}, ścieżek: {page.Paths.Count}");
 
-            // kształty: obrys + czy to trójkąt
             var shapes = new List<(Box Box, bool Triangle)>();
 
-            var byColor = page.Paths.Where(p => p.IsFilled)     //Kolorowe bloki pogrupowane
+            //All color filled blocks, grouped by color
+            var byColor = page.Paths.Where(p => p.IsFilled)     
                 .GroupBy(p => p.FillColor?.ToRGBValues())
                 .ToList();
 
+            //Adding all blocks to the shapes list, along with their bounding box and whether they are triangles or not
             foreach (var colorBoxes in byColor)
             {
                 Console.WriteLine($"Kolor {colorBoxes.Key}: {colorBoxes.Count()} bloków");
@@ -47,7 +62,7 @@
                 }
             }
 
-            // kształty o tym samym obrysie = jeden blok; dwa trójkąty = komórka przecięta
+            //Group blocks by their bounding box, and create a new Block object for each group
             var blocks = shapes
                 .GroupBy(s => (Math.Round(s.Box.Left), Math.Round(s.Box.Top),
                                Math.Round(s.Box.Right), Math.Round(s.Box.Bottom)))
@@ -60,102 +75,57 @@
                 Console.WriteLine(header.Category);
             }
 
-            foreach (var b in blocks)
-            {  //dla kazdego bloku dopisanie słow ze srodka
+            //Adding text runs to the blocks, and creating ClassEntry objects for each block
+            foreach (var b in blocks.Where(b => b.Box.Top > gridTop - 1.5))
+            {  
                 var wordsInside = words.Where(w => b.Box.Contains(w.Box.CenterX, w.Box.CenterY))
                     .ToList();
 
-                //dodanie slow do bloku: przecięte -> połówka wg przekątnej, zwykłe -> Parts[0]
                 foreach (var w in wordsInside)
                     b.Parts[b.IsSplit ? HalfOf(b.Box, w.Box) : 0].Add(w);
 
-                //Console.WriteLine($"Blok {MatchGroup(b.Box, headers)} ---- {b}");
-                Console.WriteLine($"Blok {CoveredSlots(b.Box, timeslots).Select(s => s.Start).FirstOrDefault()} ---- {b}");
+                var timeSlots = CoveredSlots(b.Box, timeslots); //Time slots that match the block's position on the page
+                var group = MatchGroup(b.Box, headers);     //Group that matches the block's position on the page
 
-            }
-
-
-            return null;
-        }
-
-        static List<TimeSlot> ExtractTimeSlots(List<TextRun> runs)
-        {
-            var rx = new Regex(@"(\d{1,2})[.:](\d{2})\s*[—–-]\s*(\d{1,2})[.:](\d{2})");
-
-            // runy, których CAŁY tekst jest godziną
-            var matches = runs
-                .Select(r => (Run: r, Match: rx.Match(r.Text)))
-                .Where(x => x.Match.Success && x.Match.Value.Length == x.Run.Text.Length)
-                .ToList();
-            if (matches.Count == 0) return [];
-
-            double leftmost = matches.Min(x => x.Run.Box.Left);
-
-            var slots = new List<TimeSlot>();
-            int day = 0;
-            TimeSpan? last = null;                       // poprzednia godzina startu
-
-            foreach (var (run, m) in matches
-                        .Where(x => x.Run.Box.Left < leftmost + 15)   // tylko lewa kolumna
-                        .OrderBy(x => x.Run.Box.Top))                 // z góry na dół
-            {
-                var start = new TimeSpan(int.Parse(m.Groups[1].Value), int.Parse(m.Groups[2].Value), 0);
-
-                if (last is not null && start <= last) day++;   // godziny zaczęły się od nowa = nowy dzień
-                last = start;
-
-                slots.Add(new TimeSlot(
-                    day,
-                    $"{int.Parse(m.Groups[1].Value):00}:{m.Groups[2].Value}",
-                    $"{int.Parse(m.Groups[3].Value):00}:{m.Groups[4].Value}",
-                    run.Box));
-            }
-            return slots;
-        }
-        static List<HeaderColumn> ExtractHeaders(List<Block> blocks, List<TextRun> runs, double gridTop)
-        {
-            List<HeaderColumn> headers = new List<HeaderColumn>();
-            var rx = new Regex(@"^(W|Ćw|Ps|L|P)\s*(\d+)$");
-            var headerBlocks = blocks.Where(b => (b.Box.Bottom <= gridTop + 1.5) && (b.Box.Height < 15))
-                .ToList();
-            foreach (var header in headerBlocks)
-            {
-                foreach (var run in runs.Where(r => header.Box.Contains(r.Box.CenterX, r.Box.CenterY)))
+                if (timeSlots.Count == 0)
                 {
-                    var m = rx.Match(run.Text);
-                    if (!m.Success) continue;
+                    Console.WriteLine($"  ! Blok bez godzin: {b.Box}");
+                    continue;
+                }
 
-                    headers.Add(new HeaderColumn(
-                        $"{m.Groups[1].Value} {m.Groups[2].Value}",   
-                        m.Groups[1].Value,                            
-                        header.Box));
-                    break;                                            
+                for (int i = 0; i < b.Parts.Length; i++)
+                {
+                    if (b.Parts[i].Count == 0) continue;
+
+                    var lines = ToLines(b.Parts[i]);
+                    var cell = ParseText(lines);
+                    if (cell is null)
+                    {
+                        Console.WriteLine($"  ! Nie rozpoznano tekstu: \"{string.Join(" | ", lines)}\"");
+                        continue;
+                    }
+
+                    Console.WriteLine($"Blok {b}");
+
+                    classEntries.Add(new ClassEntry(
+                        dayNames.TryGetValue(timeSlots.First().Day, out string? dayName) ? dayName : "Nieznany",
+                        timeSlots.First().Start,
+                        timeSlots.Last().End,
+                        cell.Subject,
+                        cell.Short,     // skrót przedmiotu
+                        cell.Type,      // typ zajęć
+                        cell.Room,      // sala
+                        cell.Teacher,   // nauczyciel
+                        group,          // grupa
+                        b.IsSplit ? i + 1 : null));
+
                 }
             }
 
-            return headers
-                .GroupBy(c => c.Label).Select(g => g.First())         // bez duplikatów
-                .OrderBy(c => c.Box.Top).ThenBy(c => c.Box.Left)
-                .ToList();
-        }
+            List<GroupNode> groups = makeGroups(headers);   //all groups, with their parent/child relationships
+            List<TimePeriod> periods = makeTimePeriods(timeslots);  //all time periods, with their start/end times and the 45-minute units that make them up
 
-        static string? MatchGroup(Box block, List<HeaderColumn> headers)
-        {
-            var header = headers.Where(h =>
-                    Math.Abs(block.Left - h.Box.Left) < 1.5 && Math.Abs(block.Right - h.Box.Right) < 1.5)
-                .OrderByDescending(h => h.Box.Width)
-                .FirstOrDefault();
-            if (header is not null) return header.Label;
-
-            bool fullWidth = Math.Abs(block.Left - headers.Min(h => h.Box.Left)) < 1.5
-                          && Math.Abs(block.Right - headers.Max(h => h.Box.Right)) < 1.5;
-            return fullWidth ? "Wszyscy" : null;
-        }
-
-        static List<TimeSlot> CoveredSlots(Box block, List<TimeSlot> slots) =>
-            slots.Where(s => s.Box.CenterY > block.Top && s.Box.CenterY < block.Bottom)
-                 .OrderBy(s => s.Box.Top)
-                 .ToList();
+            return new Schedule("test", "0", periods, groups, classEntries, new List<string>());
+        }                         
     }
-
 }

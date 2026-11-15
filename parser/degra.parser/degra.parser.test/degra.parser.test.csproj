@@ -18,4 +18,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\degra.parser\degra.parser.csproj" />
+  </ItemGroup>
+
 </Project>

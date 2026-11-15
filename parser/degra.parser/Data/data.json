@@ -1,0 +1,1096 @@
+{
+  "title": "test",
+  "updatedAt": "0",
+  "timeSlots": [
+    {
+      "number": 1,
+      "start": "08:30",
+      "end": "10:00",
+      "units": [
+        {
+          "start": "08:30",
+          "end": "09:15"
+        },
+        {
+          "start": "09:15",
+          "end": "10:00"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "start": "10:15",
+      "end": "11:45",
+      "units": [
+        {
+          "start": "10:15",
+          "end": "11:00"
+        },
+        {
+          "start": "11:00",
+          "end": "11:45"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "start": "12:00",
+      "end": "13:30",
+      "units": [
+        {
+          "start": "12:00",
+          "end": "12:45"
+        },
+        {
+          "start": "12:45",
+          "end": "13:30"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "start": "14:00",
+      "end": "15:30",
+      "units": [
+        {
+          "start": "14:00",
+          "end": "14:45"
+        },
+        {
+          "start": "14:45",
+          "end": "15:30"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "start": "16:00",
+      "end": "17:30",
+      "units": [
+        {
+          "start": "16:00",
+          "end": "16:45"
+        },
+        {
+          "start": "16:45",
+          "end": "17:30"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "start": "17:40",
+      "end": "19:10",
+      "units": [
+        {
+          "start": "17:40",
+          "end": "18:25"
+        },
+        {
+          "start": "18:25",
+          "end": "19:10"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "start": "19:20",
+      "end": "20:50",
+      "units": [
+        {
+          "start": "19:20",
+          "end": "20:05"
+        },
+        {
+          "start": "20:05",
+          "end": "20:50"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "name": "Ćw 1",
+      "category": "Ćw",
+      "parent": null,
+      "children": [
+        "Ps 1",
+        "Ps 2"
+      ]
+    },
+    {
+      "name": "Ćw 2",
+      "category": "Ćw",
+      "parent": null,
+      "children": [
+        "Ps 3"
+      ]
+    },
+    {
+      "name": "Ćw 3",
+      "category": "Ćw",
+      "parent": null,
+      "children": [
+        "Ps 5",
+        "Ps 6"
+      ]
+    },
+    {
+      "name": "Ćw 4",
+      "category": "Ćw",
+      "parent": null,
+      "children": [
+        "Ps 7",
+        "Ps 8"
+      ]
+    },
+    {
+      "name": "Ćw 5",
+      "category": "Ćw",
+      "parent": null,
+      "children": [
+        "Ps 9",
+        "Ps 10"
+      ]
+    },
+    {
+      "name": "Ps 1",
+      "category": "Ps",
+      "parent": null,
+      "children": []
+    },
+    {
+      "name": "Ps 2",
+      "category": "Ps",
+      "parent": null,
+      "children": []
+    },
+    {
+      "name": "Ps 3",
+      "category": "Ps",
+      "parent": null,
+      "children": []
+    },
+    {
+      "name": "Ps 4",
+      "category": "Ps",
+      "parent": null,
+      "children": []
+    },
+    {
+      "name": "Ps 5",
+      "category": "Ps",
+      "parent": null,
+      "children": []
+    },
+    {
+      "name": "Ps 6",
+      "category": "Ps",
+      "parent": null,
+      "children": []
+    },
+    {
+      "name": "Ps 7",
+      "category": "Ps",
+      "parent": null,
+      "children": []
+    },
+    {
+      "name": "Ps 8",
+      "category": "Ps",
+      "parent": null,
+      "children": []
+    },
+    {
+      "name": "Ps 9",
+      "category": "Ps",
+      "parent": null,
+      "children": []
+    },
+    {
+      "name": "Ps 10",
+      "category": "Ps",
+      "parent": null,
+      "children": []
+    }
+  ],
+  "entries": [
+    {
+      "day": "Poniedziałek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "ALGEBRA LINIOWA Z GEOMETRIĄ ANALITYCZNĄ",
+      "subjectShort": "Algebra",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": "prof. dr hab. Ryszard Mazurek",
+      "group": "Wszyscy",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "WPROWADZENIE DO INFORMATYKI",
+      "subjectShort": "WDI",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": "dr inż. Anna Borowska",
+      "group": "Wszyscy",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "11:00",
+      "end": "11:45",
+      "subject": "LOGIKA DLA INFORMATYKÓW",
+      "subjectShort": "Logika",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": "dr Magdalena Kacprzak",
+      "group": "Wszyscy",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "WPROWADZENIE DO SYSTEMU LINUX",
+      "subjectShort": "WdSL",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": "prof. dr hab. inż. Ireneusz Mrozek",
+      "group": "Wszyscy",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "METODYKA STUDIOWANIA",
+      "subjectShort": "MS",
+      "type": "Wykład",
+      "room": "C25",
+      "teacher": "dr inż. Andrzej Chmielewski",
+      "group": "Wszyscy",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "FIZYKA DLA INFORMATYKÓW",
+      "subjectShort": "Fizyka",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": "dr Ewa Mrozek",
+      "group": "Wszyscy",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "ANALIZA MATEMATYCZNA",
+      "subjectShort": "AM",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": "dr hab. Ewa Girejko",
+      "group": "Wszyscy",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "PODSTAWY PROGRAMOWANIA",
+      "subjectShort": "PP",
+      "type": "Wykład",
+      "room": "B5",
+      "teacher": "dr inż. Anna Łupińska-Dubicka",
+      "group": "Wszyscy",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "10:15",
+      "end": "11:00",
+      "subject": "WDI",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C16",
+      "teacher": "K. Ostrowski",
+      "group": "Ćw 4",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "11:00",
+      "end": "11:45",
+      "subject": "WDI",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C18",
+      "teacher": "K. Ostrowski",
+      "group": "Ćw 2",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "10:15",
+      "end": "11:00",
+      "subject": "WDI",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C18",
+      "teacher": "K. Ostrowski",
+      "group": "Ćw 3",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "09:15",
+      "end": "10:00",
+      "subject": "Logika dla informatyków",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C22",
+      "teacher": "J. Kużelewska",
+      "group": "Ćw 1",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "08:30",
+      "end": "09:15",
+      "subject": "Logika dla informatyków",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C18",
+      "teacher": "J. Kużelewska",
+      "group": "Ćw 3",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "08:30",
+      "end": "09:15",
+      "subject": "Logika dla informatyków",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C18",
+      "teacher": "J. Kużelewska",
+      "group": "Ćw 2",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "Analiza matematyczna",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C17",
+      "teacher": "dr inż. Rajmund Stasiewicz",
+      "group": "Ćw 3",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "16:00",
+      "end": "16:45",
+      "subject": "WDI",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C18",
+      "teacher": "A. Borowska",
+      "group": "Ćw 5",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "16:45",
+      "end": "17:30",
+      "subject": "WDI",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C18",
+      "teacher": "A. Borowska",
+      "group": "Ćw 1",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "Analiza matematyczna",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C17",
+      "teacher": "dr inż. Rajmund Stasiewicz",
+      "group": "Ćw 4",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "Fizyka dla informatyków",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C22",
+      "teacher": "dr Ewa Mrozek",
+      "group": "Ćw 4",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Fizyka dla informatyków",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C18",
+      "teacher": "dr Ewa Mrozek",
+      "group": "Ćw 5",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Analiza matematyczna",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C21",
+      "teacher": "dr inż. Rajmund Stasiewicz",
+      "group": "Ćw 2",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "Fizyka dla informatyków",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C22",
+      "teacher": "dr Ewa Mrozek",
+      "group": "Ćw 3",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "Fizyka dla informatyków",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C16",
+      "teacher": "mgr Ewa Gobcewicz",
+      "group": "Ćw 1",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Fizyka dla informatyków",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C22",
+      "teacher": "dr Maciej Ciężkowski",
+      "group": "Ćw 2",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "08:30",
+      "end": "10:00",
+      "subject": "Algebra liniowa z geometrią analityczną",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C17",
+      "teacher": "dr inż. Rajmund Stasiewicz",
+      "group": "Ćw 5",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "08:30",
+      "end": "09:15",
+      "subject": "Logika dla informatyków",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "A133",
+      "teacher": "J. Kużelewska",
+      "group": "Ćw 5",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "09:15",
+      "end": "10:00",
+      "subject": "Logika dla informatyków",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C18",
+      "teacher": "J. Kużelewska",
+      "group": "Ćw 4",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Analiza matematyczna",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C16",
+      "teacher": "dr hab. Ewa Girejko",
+      "group": "Ćw 1",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "Analiza matematyczna",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C17",
+      "teacher": "dr inż. Rajmund Stasiewicz",
+      "group": "Ćw 5",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Algebra liniowa z geometrią analityczną",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C17",
+      "teacher": "dr inż. Rajmund Stasiewicz",
+      "group": "Ćw 4",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "10:15",
+      "end": "11:45",
+      "subject": "Algebra liniowa z geometrią analityczną",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C18",
+      "teacher": "dr inż. Rajmund Stasiewicz",
+      "group": "Ćw 2",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "12:00",
+      "end": "13:30",
+      "subject": "Algebra liniowa z geometrią analityczną",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C18",
+      "teacher": "dr inż. Rajmund Stasiewicz",
+      "group": "Ćw 1",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "Algebra liniowa z geometrią analityczną",
+      "subjectShort": null,
+      "type": "Ćwiczenia",
+      "room": "C18",
+      "teacher": "dr inż. Rajmund Stasiewicz",
+      "group": "Ćw 3",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "WdSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A227",
+      "teacher": "mgr M. Kopczewski",
+      "group": "Ps 4",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "WdSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A227",
+      "teacher": "mgr M. Kopczewski",
+      "group": "Ps 9",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "19:20",
+      "end": "20:50",
+      "subject": "WdSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A227",
+      "teacher": "mgr M. Kopczewski",
+      "group": "Ps 1",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "16:00",
+      "end": "16:45",
+      "subject": "Algebra",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 8",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "17:40",
+      "end": "18:25",
+      "subject": "Algebra",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 1",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "16:45",
+      "end": "17:30",
+      "subject": "AM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 8",
+      "part": null
+    },
+    {
+      "day": "Poniedziałek",
+      "start": "10:15",
+      "end": "11:00",
+      "subject": "AM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A025",
+      "teacher": "J. Kużelewska",
+      "group": "Ps 1",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "17:40",
+      "end": "20:05",
+      "subject": "PP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A229",
+      "teacher": "mgr inż. Bruno Mirčevski",
+      "group": "Ps 4",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "09:15",
+      "end": "11:00",
+      "subject": "WdSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A228",
+      "teacher": "mgr inż. Patryk Orłowski",
+      "group": "Ps 10",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "WdSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A211",
+      "teacher": "mgr inż. Patryk Orłowski",
+      "group": "Ps 8",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "WdSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A228",
+      "teacher": "mgr inż. Piotr Mojkowski",
+      "group": "Ps 6",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "16:00",
+      "end": "17:30",
+      "subject": "WdSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A228",
+      "teacher": "mgr inż. Piotr Mojkowski",
+      "group": "Ps 5",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "WdSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A228",
+      "teacher": "mgr inż. Piotr Mojkowski",
+      "group": "Ps 7",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "14:00",
+      "end": "14:45",
+      "subject": "Algebra",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 5",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "16:00",
+      "end": "16:45",
+      "subject": "Algebra",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 6",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "14:45",
+      "end": "15:30",
+      "subject": "AM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 5",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "09:15",
+      "end": "10:00",
+      "subject": "AM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A212",
+      "teacher": "J. Kużelewska",
+      "group": "Ps 6",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "09:15",
+      "end": "11:45",
+      "subject": "PP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A212",
+      "teacher": "mgr T. Hordjewicz",
+      "group": "Ps 2",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "16:45",
+      "end": "19:10",
+      "subject": "PP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A211",
+      "teacher": "mgr T. Hordjewicz",
+      "group": "Ps 8",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "16:00",
+      "end": "16:45",
+      "subject": "Algebra",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 9",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "17:40",
+      "end": "18:25",
+      "subject": "Algebra",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 4",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "16:45",
+      "end": "17:30",
+      "subject": "AM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 9",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "10:15",
+      "end": "11:00",
+      "subject": "AM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A212",
+      "teacher": "J. Kużelewska",
+      "group": "Ps 4",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "09:15",
+      "end": "10:00",
+      "subject": "AM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 10",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "11:00",
+      "end": "11:45",
+      "subject": "AM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 7",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "08:30",
+      "end": "09:15",
+      "subject": "Algebra",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 10",
+      "part": null
+    },
+    {
+      "day": "Środa",
+      "start": "10:15",
+      "end": "11:00",
+      "subject": "Algebra",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 7",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "12:00",
+      "end": "14:45",
+      "subject": "PP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A026",
+      "teacher": "mgr T. Kuczyński",
+      "group": "Ps 6",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "14:45",
+      "end": "17:30",
+      "subject": "PP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A026",
+      "teacher": "mgr T. Kuczyński",
+      "group": "Ps 3",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "16:00",
+      "end": "18:25",
+      "subject": "PP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A024",
+      "teacher": "dr inż. Krzysztof Jurczuk",
+      "group": "Ps 1",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "14:00",
+      "end": "15:30",
+      "subject": "WdSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A211",
+      "teacher": "mgr inż. Patryk Orłowski",
+      "group": "Ps 2",
+      "part": null
+    },
+    {
+      "day": "Czwartek",
+      "start": "17:40",
+      "end": "19:10",
+      "subject": "WdSL",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A227",
+      "teacher": "mgr M. Kopczewski",
+      "group": "Ps 3",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "10:15",
+      "end": "12:45",
+      "subject": "PP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A02",
+      "teacher": "dr A. Łupińska-Dubicka",
+      "group": "Ps 5",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "10:15",
+      "end": "12:45",
+      "subject": "PP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A230",
+      "teacher": "dr inż. Dorota Duda",
+      "group": "Ps 10",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "12:45",
+      "end": "15:30",
+      "subject": "PP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A230",
+      "teacher": "dr inż. Dorota Duda",
+      "group": "Ps 9",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "12:00",
+      "end": "12:45",
+      "subject": "Algebra",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 3",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "14:00",
+      "end": "14:45",
+      "subject": "Algebra",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 2",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "12:45",
+      "end": "13:30",
+      "subject": "AM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 3",
+      "part": null
+    },
+    {
+      "day": "Piątek",
+      "start": "14:45",
+      "end": "15:30",
+      "subject": "AM",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A017",
+      "teacher": "W. Bułatow",
+      "group": "Ps 2",
+      "part": null
+    },
+    {
+      "day": "Wtorek",
+      "start": "14:45",
+      "end": "17:30",
+      "subject": "PP",
+      "subjectShort": null,
+      "type": "Pracownia specjalistyczna",
+      "room": "A229",
+      "teacher": "mgr inż. Bruno Mirčevski",
+      "group": "Ps 7",
+      "part": null
+    }
+  ],
+  "warnings": []
+}
