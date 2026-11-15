@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="degra-parser-api/degra-parser-api/degra-parser-api.csproj" />
+  <Project Path="parser/degra.parser/cli/degra.parser.cli.csproj" Id="665eee89-d0c6-4373-860d-054b331d00f6" />
+  <Project Path="parser/degra.parser/degra.parser.test/degra.parser.test.csproj" Id="00f1992d-52ad-49cf-b8b2-5b8685dc1a19" />
+  <Project Path="parser/degra.parser/degra.parser/degra.parser.csproj" />
+</Solution>
