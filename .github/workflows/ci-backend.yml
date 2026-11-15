@@ -1,0 +1,63 @@
+name: CI Backend
+
+# Build + testy całego backendu .NET (API, parser, CLI) z jednej solucji degra-parser.slnx.
+# Odpala się tylko wtedy, gdy zmiana dotyczy backendu, żeby zmiany we froncie go nie uruchamiały.
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'degra-parser-api/**'
+      - 'parser/**'
+      - 'degra-parser.slnx'
+      - '.github/workflows/ci-backend.yml'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'degra-parser-api/**'
+      - 'parser/**'
+      - 'degra-parser.slnx'
+      - '.github/workflows/ci-backend.yml'
+  workflow_dispatch: # ręczne uruchomienie z zakładki Actions
+
+# Nowy push na ten sam branch/PR anuluje poprzedni, jeszcze trwający run
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+jobs:
+  build-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore degra-parser.slnx
+
+      - name: Build
+        run: dotnet build degra-parser.slnx --no-restore -c Release
+
+      - name: Test
+        run: dotnet test degra-parser.slnx --no-build -c Release --logger trx --results-directory TestResults
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: TestResults
+          if-no-files-found: ignore
