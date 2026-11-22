@@ -18,7 +18,7 @@
                     .HasColumnType("jsonb")
                     .HasConversion(
                         s => JsonSerializer.Serialize(s, JsonOpts.Default),
-                        j => JsonSerializer.Deserialize<Schedule>(j, JsonOpts.Default)!);
+                        j => JsonSerializer.Deserialize<degra.parser.Schedule>(j, JsonOpts.Default)!);
             });
         }
     }

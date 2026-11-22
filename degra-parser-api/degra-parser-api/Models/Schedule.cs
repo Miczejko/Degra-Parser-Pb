@@ -1,5 +1,4 @@
-﻿using Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.Json;
-using degra.parser;
+﻿using ParsedSchedule = degra.parser.Schedule;
 
 namespace degra_parser_api.Models
 {
@@ -8,7 +7,7 @@ namespace degra_parser_api.Models
         public Guid Id { get; set; }
         public string Title { get; set; } = string.Empty;
         public DateTimeOffset UpdatedAt { get; set; }
-        public Schedule Data { get; set; } = default!;
+        public ParsedSchedule Data { get; set; } = default!;
 
     }
 }
