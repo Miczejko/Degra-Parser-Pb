@@ -12,6 +12,8 @@ builder.Services.AddOpenApi();
 builder.Services.AddDbContext<AppDbContext>(o =>
     o.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
 
+builder.Services.AddSingleton(TimeProvider.System);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
