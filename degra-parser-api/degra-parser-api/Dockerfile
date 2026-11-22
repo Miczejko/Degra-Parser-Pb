@@ -12,10 +12,11 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["degra-parser-api/degra-parser-api.csproj", "degra-parser-api/"]
-RUN dotnet restore "./degra-parser-api/degra-parser-api.csproj"
+COPY ["degra-parser-api/degra-parser-api/degra-parser-api.csproj", "degra-parser-api/degra-parser-api/"]
+COPY ["parser/degra.parser/degra.parser/degra.parser.csproj", "parser/degra.parser/degra.parser/"]
+RUN dotnet restore "./degra-parser-api/degra-parser-api/degra-parser-api.csproj"
 COPY . .
-WORKDIR "/src/degra-parser-api"
+WORKDIR "/src/degra-parser-api/degra-parser-api"
 RUN dotnet build "./degra-parser-api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Ten etap służy do publikowania projektu usługi do skopiowania do etapu końcowego

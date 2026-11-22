@@ -24,4 +24,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\parser\degra.parser\degra.parser\degra.parser.csproj" />
+  </ItemGroup>
+
 </Project>
