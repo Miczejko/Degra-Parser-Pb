@@ -18,8 +18,8 @@ services:
 
   api:
     build:
-      context: .
-      dockerfile: degra-parser-api/Dockerfile
+      context: ..
+      dockerfile: degra-parser-api/degra-parser-api/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__Default: "Host=db;Port=5432;Database=${DB_NAME};Username=${DB_USER};Password=${DB_PASSWORD}"
