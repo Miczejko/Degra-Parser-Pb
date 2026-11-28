@@ -1,4 +1,5 @@
 using degra_parser_api.Data;
+using degra_parser_api.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,11 @@ builder.Services.AddDbContext<AppDbContext>(o =>
     o.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
 
 builder.Services.AddSingleton(TimeProvider.System);
+
+builder.Services.Configure<ScheduleSyncOptions>(
+    builder.Configuration.GetSection(ScheduleSyncOptions.SectionName));
+builder.Services.AddHttpClient();
+builder.Services.AddHostedService<ScheduleSyncService>();
 
 var app = builder.Build();
 
