@@ -34,7 +34,8 @@ namespace degra_parser_api.Services
             }
         }
 
-        private async Task SyncAllAsync(CancellationToken ct)
+        // Public so tests can run exactly one round without waiting for the timer
+        public async Task SyncAllAsync(CancellationToken ct)
         {
             logger.LogInformation("Sync round started");
 

@@ -22,6 +22,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Real PDFs used as "downloaded" files in sync tests -->
+    <None Include="..\..\parser\degra.parser\testData\isi1.pdf" Link="TestData\isi1.pdf" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\parser\degra.parser\testData\isi5.pdf" Link="TestData\isi5.pdf" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
 
